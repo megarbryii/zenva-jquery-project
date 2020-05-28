@@ -4,6 +4,16 @@
     background-color: #cfc;
 }
 
+.box-button {
+    width: 100px;
+    background-color: #ccf;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .highlight {
     background-color: #fcc;
 }
