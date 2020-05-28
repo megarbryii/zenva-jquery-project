@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    $('#container').find('.hot').children().first().next().addClass('highlight');
+    $('#snow').parent().find('.title').addClass('highlight');
+
+    console.log($('#snow').closest('#container'));
 });
