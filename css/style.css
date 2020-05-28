@@ -1,3 +1,7 @@
 .highlight {
-    background-color: #ff0;
+    color: #00f;
+}
+
+.item {
+    margin-left: 8px;
 }
