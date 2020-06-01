@@ -29,4 +29,8 @@ $(document).ready(function() {
             $(this).parent().remove();
         })
    })
+
+   $.ajax('data/item.json', function(res) {
+       console.log(res);
+   });
 });
