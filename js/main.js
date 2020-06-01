@@ -1,6 +1,8 @@
-function addItem(name, desc, price, moreInfo) {
+var cart = 0;
+
+function addItem(id, name, desc, price, moreInfo) {
     let html = '';
-    html += '<div class="item">';
+    html += '<div class="item" data-id="'+ id + '">';
          html += '<div class="name">' + name + '</div>';
          html += '<img src="assests/origamiFlower.jpg" alt="Tokyo pic">';
          html += '<div class="desc">' + desc + '</div>';
@@ -35,7 +37,7 @@ $(document).ready(function() {
         .done(function(res) {
             let items = res.items;
             items.forEach(function(item) {
-                addItem(item.name, item.desc, item.price, item.moreInfo);
+                addItem(item.id, item.name, item.desc, item.price, item.moreInfo);
             })
         })
         .fail(function(req, errType, errMsg) {
@@ -43,6 +45,25 @@ $(document).ready(function() {
         })
         .always(function(){
 
+        });
+
+        $('#container').on('click', '.item-add', function() {
+            let id = $(this).parent().data('id');
+            $.ajax('data/addToCart.json', {
+                type: 'post',
+                data: {
+                    id: id
+                },
+                dataType: 'json',
+                contentType: 'application/json'
+            })
+            .done(function(res) {
+                if(res.message === 'success!') {
+                    let price = res.price;
+                    cart += price;
+                    $('#cart-container').text('$' + cart);
+                }
+            })
         });
    });
 

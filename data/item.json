@@ -1,18 +1,21 @@
 {
     "items": [
         {
+            "id": 0,
             "name": "Tokyo",
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             "price": 499,
             "moreInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         },
         {
+            "id": 1,
             "name": "Coppenhaagen",
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             "price": 499,
             "moreInfo": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         },
         {
+            "id": 2,
             "name": "Long Beach",
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             "price": 499,
