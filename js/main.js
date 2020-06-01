@@ -22,6 +22,7 @@ $(document).ready(function() {
             e.preventDefault();
 
             $(this).parent().find('.more-info').slideToggle('fast');
+            $(this).animate({ 'opacity': 0.5, "margin-left": 10 }, 'fast').animate({'opacity': 1.0, 'margin-left': 0}, 'fast');
         })
 
         $('#container').on('click', '.item-remove', function() {
