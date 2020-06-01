@@ -75,6 +75,25 @@ $(document).ready(function() {
         });
 
         $('#newsletter-checkbox').trigger('change');
+
+        $('#cart-form').on('submit', function(e) {
+            e.preventDefault();
+
+            let data = {
+                form: $('#cart-form').serialize(),
+                price: cart
+            };
+
+            console.log(data.form);
+
+            $.ajax($(this).attr('action'), {
+                type: 'post',
+                data: data
+            })
+            .done(function(res){
+                $('#feedback-message').text(res.message);
+            })
+        })
    });
 
    
