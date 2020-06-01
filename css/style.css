@@ -27,3 +27,7 @@ body {
 .item .price {
     margin: 8px 0;
 }
+
+.item .more-info {
+    display: none;
+}
